@@ -3,7 +3,6 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 14, 2015 at 06:23 PM
 -- Server version: 5.5.32
 -- PHP Version: 5.4.16
 
@@ -43,13 +42,6 @@ CREATE TABLE IF NOT EXISTS `baihat` (
 --
 -- Dumping data for table `baihat`
 --
-
-INSERT INTO `baihat` (`id`, `tenbaihat`, `casy`, `tacgia`, `theloai`, `duongdan`, `loibaihat`, `luotnghe`) VALUES
-(40, 'Bad Boy', 'Đông Nhi', '', 'Việt Nam', 'nhac/Dong Nhi - Bad Boy.mp3', '', 17),
-(46, 'Khuôn Mặt Đáng Thương', 'Sơn Tùng M-TP', '', 'Việt Nam', 'nhac/Khuon Mat Dang Thuong.mp3', '', 12),
-(47, 'Thu Cuối', 'Yanbi ft. Mr T ft. Hằng BingBoong', '', 'Việt Nam', 'nhac/Thu Cuoi.mp3', '', 10),
-(45, 'Gạt Đi Nước Mắt', 'Noo Phước Thịnh ft. Tonny Việt', '', 'Việt Nam', 'nhac/Gat di nuoc mat.mp3', '', 9),
-(48, 'Because I Miss You', 'Jung Yong Hwa', '', 'Hàn Quốc', 'nhac/Because I Miss You - Jung Yong Hwa.mp3', '', 6);
 
 -- --------------------------------------------------------
 

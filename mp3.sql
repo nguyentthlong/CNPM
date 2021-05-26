@@ -1,10 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.0.4
+-- version 4.5.1
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Server version: 5.5.32
--- PHP Version: 5.4.16
+-- Generation Time: May 26, 2021 at 06:04 PM
+-- Server version: 10.1.8-MariaDB
+-- PHP Version: 5.6.14
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -13,13 +14,11 @@ SET time_zone = "+00:00";
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
 /*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
-/*!40101 SET NAMES utf8 */;
+/*!40101 SET NAMES utf8mb4 */;
 
 --
 -- Database: `mp3`
 --
-CREATE DATABASE IF NOT EXISTS `mp3` DEFAULT CHARACTER SET latin1 COLLATE latin1_swedish_ci;
-USE `mp3`;
 
 -- --------------------------------------------------------
 
@@ -27,39 +26,27 @@ USE `mp3`;
 -- Table structure for table `baihat`
 --
 
-CREATE TABLE IF NOT EXISTS `baihat` (
-  `id` int(255) NOT NULL AUTO_INCREMENT,
+CREATE TABLE `baihat` (
+  `id` int(255) NOT NULL,
   `tenbaihat` varchar(200) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
   `casy` varchar(100) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
   `tacgia` varchar(100) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
   `theloai` varchar(20) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
   `duongdan` varchar(200) NOT NULL,
   `loibaihat` varchar(9999) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
-  `luotnghe` int(255) NOT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=49 ;
+  `luotnghe` int(255) NOT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `baihat`
 --
 
--- --------------------------------------------------------
-
---
--- Table structure for table `baihathot`
---
-
-CREATE TABLE IF NOT EXISTS `baihathot` (
-  `id` int(255) NOT NULL AUTO_INCREMENT,
-  `tenbaihat` varchar(200) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
-  `casy` varchar(100) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
-  `tacgia` varchar(100) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
-  `theloai` varchar(20) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
-  `duongdan` varchar(200) NOT NULL,
-  `loibaihat` varchar(9999) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
-  `luotnghe` int(255) NOT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=39 ;
+INSERT INTO `baihat` (`id`, `tenbaihat`, `casy`, `tacgia`, `theloai`, `duongdan`, `loibaihat`, `luotnghe`) VALUES
+(60, 'Build a Bitch', 'Bella Poarch ', '', 'Nhạc Quốc Tế', 'nhac/Build a Bitch Bella Poarch .mp3', '', 107),
+(59, 'Phải Chăng Em Đã Yêu', 'Juky San ft RedT', '', 'Việt Nam', 'nhac/Phai-Chang-Em-Da-Yeu Juky San ft RedT.mp3', '', 19),
+(55, 'Mấy Bé Lì', 'TLINH X NAOMI X YENJI', '', 'Rap Việt', 'nhac/May-be-li-TLINH-NAOMI-YENJI.mp3', '', 118),
+(57, 'Đây Là Việt Nam', 'Rhymastic ft Blacka', '', 'Rap Việt', 'nhac/DayLaVietNam.mp3', '', 11),
+(58, 'Salt', 'Ava Max', '', 'Nhạc Quốc Tế', 'nhac/Salt-Ava-Max.mp3', '', 5);
 
 -- --------------------------------------------------------
 
@@ -67,29 +54,16 @@ CREATE TABLE IF NOT EXISTS `baihathot` (
 -- Table structure for table `baihatmoi`
 --
 
-CREATE TABLE IF NOT EXISTS `baihatmoi` (
-  `id` int(255) NOT NULL AUTO_INCREMENT,
+CREATE TABLE `baihatmoi` (
+  `id` int(255) NOT NULL,
   `tenbaihat` varchar(200) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
   `casy` varchar(100) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
   `tacgia` varchar(100) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
   `theloai` varchar(20) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
   `duongdan` varchar(200) NOT NULL,
   `loibaihat` varchar(9999) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
-  `luotnghe` int(255) NOT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=55 ;
-
--- --------------------------------------------------------
-
---
--- Table structure for table `bangquyen`
---
-
-CREATE TABLE IF NOT EXISTS `bangquyen` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `noidung` varchar(500) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=MyISAM DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+  `luotnghe` int(255) NOT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
@@ -97,83 +71,21 @@ CREATE TABLE IF NOT EXISTS `bangquyen` (
 -- Table structure for table `casy`
 --
 
-CREATE TABLE IF NOT EXISTS `casy` (
-  `id` int(255) NOT NULL AUTO_INCREMENT,
-  `casy` varchar(100) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=79 ;
+CREATE TABLE `casy` (
+  `id` int(255) NOT NULL,
+  `casy` varchar(100) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `casy`
 --
 
 INSERT INTO `casy` (`id`, `casy`) VALUES
-(78, '365 Daband'),
-(77, 'Đông Nhi'),
-(76, 'Sơn Tùng M-TP');
-
--- --------------------------------------------------------
-
---
--- Table structure for table `chuchay`
---
-
-CREATE TABLE IF NOT EXISTS `chuchay` (
-  `id` int(11) NOT NULL,
-  `noidung` varchar(500) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
-
---
--- Dumping data for table `chuchay`
---
-
-INSERT INTO `chuchay` (`id`, `noidung`) VALUES
-(1, 'Web nghe nhạc trực tuyền Online Mp3 | Phát Nguyễn');
-
--- --------------------------------------------------------
-
---
--- Table structure for table `chude`
---
-
-CREATE TABLE IF NOT EXISTS `chude` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `chude` varchar(500) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=19 ;
-
---
--- Dumping data for table `chude`
---
-
-INSERT INTO `chude` (`id`, `chude`) VALUES
-(10, 'Nhạc Hot Việt'),
-(11, 'Nhạc Chờ Hot'),
-(12, 'Nhạc Việt Mới'),
-(13, 'Nhạc Hot Rap Việt'),
-(15, 'Hôm Nay Nghe Gì? '),
-(16, 'Love Songs'),
-(17, 'Nhạc Sàn'),
-(18, 'Nhạc Giáng Sinh');
-
--- --------------------------------------------------------
-
---
--- Table structure for table `footer`
---
-
-CREATE TABLE IF NOT EXISTS `footer` (
-  `id` int(10) NOT NULL,
-  `noidung` varchar(9999) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
-
---
--- Dumping data for table `footer`
---
-
-INSERT INTO `footer` (`id`, `noidung`) VALUES
-(1, '<h1 style="font-family: Arial, Verdana; font-size: 10pt; font-weight: normal; text-align: center;"><hr></h1><h3 style="font-family: Arial, Verdana; font-size: 10pt; text-align: center;"><br></h3><blockquote style="margin: 0px 0px 0px 40px; border: none; padding: 0px;"><h1 style="font-family: Arial, Verdana; font-size: 10pt; text-align: center;"></h1><h4 style="text-align: center;"><font color="#ff0000" size="5" face="Courier New"><u>Phát Nguyễn</u></font></h4><div style="font-family: Arial, Verdana; font-size: 10pt;"><font color="#ff0000"><u><br></u></font></div><div style="font-size: 10pt; text-align: center;"><font color="#ff0000" face="Comic Sans MS"><b><u>Liên hệ Facebook:</u></b>&nbsp;http://facebook.com/phatvalong<b>&nbsp;<u>Điện Thoại:</u> </b>01227100449</font></div></blockquote><hr style="font-family: Arial, Verdana; font-size: 10pt; font-weight: normal; font-style: normal; font-variant: normal; line-height: normal;">');
+(80, 'TLINH X NAOMI X YENJI'),
+(79, 'Bella Poarch '),
+(81, 'Juky San ft RedT'),
+(82, 'Ava Max'),
+(83, 'Rhymastic ft Blacka');
 
 -- --------------------------------------------------------
 
@@ -181,18 +93,19 @@ INSERT INTO `footer` (`id`, `noidung`) VALUES
 -- Table structure for table `logo`
 --
 
-CREATE TABLE IF NOT EXISTS `logo` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `noidung` varchar(500) NOT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=3 ;
+CREATE TABLE `logo` (
+  `id` int(11) NOT NULL,
+  `noidung` varchar(500) NOT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `logo`
 --
 
 INSERT INTO `logo` (`id`, `noidung`) VALUES
-(1, 'images/logo/header.png');
+(9, 'images/logo/header.png'),
+(8, 'images/logo/header.png'),
+(10, 'images/logo/header (1).png');
 
 -- --------------------------------------------------------
 
@@ -200,7 +113,7 @@ INSERT INTO `logo` (`id`, `noidung`) VALUES
 -- Table structure for table `luot`
 --
 
-CREATE TABLE IF NOT EXISTS `luot` (
+CREATE TABLE `luot` (
   `luot` int(255) NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
@@ -209,7 +122,7 @@ CREATE TABLE IF NOT EXISTS `luot` (
 --
 
 INSERT INTO `luot` (`luot`) VALUES
-(1529);
+(1950);
 
 -- --------------------------------------------------------
 
@@ -217,11 +130,10 @@ INSERT INTO `luot` (`luot`) VALUES
 -- Table structure for table `status`
 --
 
-CREATE TABLE IF NOT EXISTS `status` (
-  `id` int(255) NOT NULL AUTO_INCREMENT,
-  `tinhtrang` varchar(10) NOT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=3 ;
+CREATE TABLE `status` (
+  `id` int(255) NOT NULL,
+  `tinhtrang` varchar(10) NOT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `status`
@@ -237,11 +149,10 @@ INSERT INTO `status` (`id`, `tinhtrang`) VALUES
 -- Table structure for table `theloai`
 --
 
-CREATE TABLE IF NOT EXISTS `theloai` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `noidung` varchar(50) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=23 ;
+CREATE TABLE `theloai` (
+  `id` int(11) NOT NULL,
+  `noidung` varchar(50) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `theloai`
@@ -253,7 +164,8 @@ INSERT INTO `theloai` (`id`, `noidung`) VALUES
 (19, 'Âu Mỹ'),
 (20, 'Hàn Quốc'),
 (21, 'Rap Việt'),
-(22, 'Cách Mạng');
+(22, 'Cách Mạng'),
+(23, 'EDM');
 
 -- --------------------------------------------------------
 
@@ -261,7 +173,7 @@ INSERT INTO `theloai` (`id`, `noidung`) VALUES
 -- Table structure for table `timelog`
 --
 
-CREATE TABLE IF NOT EXISTS `timelog` (
+CREATE TABLE `timelog` (
   `id` int(255) NOT NULL,
   `time` date NOT NULL,
   `day` date NOT NULL
@@ -273,8 +185,8 @@ CREATE TABLE IF NOT EXISTS `timelog` (
 -- Table structure for table `user`
 --
 
-CREATE TABLE IF NOT EXISTS `user` (
-  `id` int(255) NOT NULL AUTO_INCREMENT,
+CREATE TABLE `user` (
+  `id` int(255) NOT NULL,
   `username` varchar(100) NOT NULL,
   `password` varchar(100) NOT NULL,
   `name` varchar(50) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
@@ -283,35 +195,102 @@ CREATE TABLE IF NOT EXISTS `user` (
   `ngaysinh` varchar(30) NOT NULL,
   `diachi` varchar(200) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
   `email` varchar(50) NOT NULL,
-  `level` int(255) NOT NULL DEFAULT '1',
-  PRIMARY KEY (`id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=33 ;
+  `level` int(255) NOT NULL DEFAULT '1'
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `user`
 --
 
 INSERT INTO `user` (`id`, `username`, `password`, `name`, `status`, `gioitinh`, `ngaysinh`, `diachi`, `email`, `level`) VALUES
-(1, 'admin', 'admin', 'Phát Nguyễn', 'OK', '', '', 'RAH', 'phatvalong@gmail.com', 3);
-
--- --------------------------------------------------------
-
---
--- Table structure for table `user_online`
---
-
-CREATE TABLE IF NOT EXISTS `user_online` (
-  `session` varchar(99) NOT NULL,
-  `time` varchar(20) NOT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+(1, 'admin', 'admin', 'Mạnh Long', 'OK', '', '', 'VN', 'manklong2000@gmail.com', 3),
+(33, 'manklong2000', 'nmlnml', 'Mạnh Long', 'OK', 'Nam', '27-8-2000', 'Hà Nội', 'manklong2000@gmail.com', 1);
 
 --
--- Dumping data for table `user_online`
+-- Indexes for dumped tables
 --
 
-INSERT INTO `user_online` (`session`, `time`) VALUES
-('r6cggvec4l6kdbei4fingr8vp1', '1434026198');
+--
+-- Indexes for table `baihat`
+--
+ALTER TABLE `baihat`
+  ADD PRIMARY KEY (`id`);
 
+--
+-- Indexes for table `baihatmoi`
+--
+ALTER TABLE `baihatmoi`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `casy`
+--
+ALTER TABLE `casy`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `logo`
+--
+ALTER TABLE `logo`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `status`
+--
+ALTER TABLE `status`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `theloai`
+--
+ALTER TABLE `theloai`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `user`
+--
+ALTER TABLE `user`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- AUTO_INCREMENT for dumped tables
+--
+
+--
+-- AUTO_INCREMENT for table `baihat`
+--
+ALTER TABLE `baihat`
+  MODIFY `id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=61;
+--
+-- AUTO_INCREMENT for table `baihatmoi`
+--
+ALTER TABLE `baihatmoi`
+  MODIFY `id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=72;
+--
+-- AUTO_INCREMENT for table `casy`
+--
+ALTER TABLE `casy`
+  MODIFY `id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=84;
+--
+-- AUTO_INCREMENT for table `logo`
+--
+ALTER TABLE `logo`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+--
+-- AUTO_INCREMENT for table `status`
+--
+ALTER TABLE `status`
+  MODIFY `id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+--
+-- AUTO_INCREMENT for table `theloai`
+--
+ALTER TABLE `theloai`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
+--
+-- AUTO_INCREMENT for table `user`
+--
+ALTER TABLE `user`
+  MODIFY `id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=34;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

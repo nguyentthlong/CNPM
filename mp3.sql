@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: May 26, 2021 at 06:04 PM
+-- Generation Time: Jun 06, 2021 at 08:01 PM
 -- Server version: 10.1.8-MariaDB
 -- PHP Version: 5.6.14
 
@@ -110,23 +110,6 @@ INSERT INTO `logo` (`id`, `noidung`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `luot`
---
-
-CREATE TABLE `luot` (
-  `luot` int(255) NOT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
-
---
--- Dumping data for table `luot`
---
-
-INSERT INTO `luot` (`luot`) VALUES
-(1950);
-
--- --------------------------------------------------------
-
---
 -- Table structure for table `status`
 --
 
@@ -170,18 +153,6 @@ INSERT INTO `theloai` (`id`, `noidung`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `timelog`
---
-
-CREATE TABLE `timelog` (
-  `id` int(255) NOT NULL,
-  `time` date NOT NULL,
-  `day` date NOT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
-
--- --------------------------------------------------------
-
---
 -- Table structure for table `user`
 --
 
@@ -204,7 +175,8 @@ CREATE TABLE `user` (
 
 INSERT INTO `user` (`id`, `username`, `password`, `name`, `status`, `gioitinh`, `ngaysinh`, `diachi`, `email`, `level`) VALUES
 (1, 'admin', 'admin', 'Mạnh Long', 'OK', '', '', 'VN', 'manklong2000@gmail.com', 3),
-(33, 'manklong2000', 'nmlnml', 'Mạnh Long', 'OK', 'Nam', '27-8-2000', 'Hà Nội', 'manklong2000@gmail.com', 1);
+(33, 'manklong2000', 'nmlnml', 'Mạnh Long', 'OK', 'Nam', '27-8-2000', 'Hà Nội', 'manklong2000@gmail.com', 1),
+(34, 'zinzin', 'zinzin', 'Long Zin', 'OK', 'Nam', '20-9-2000', 'Long Biên', 'longzyn2009@gmail.com', 1);
 
 --
 -- Indexes for dumped tables
@@ -260,12 +232,12 @@ ALTER TABLE `user`
 -- AUTO_INCREMENT for table `baihat`
 --
 ALTER TABLE `baihat`
-  MODIFY `id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=61;
+  MODIFY `id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=62;
 --
 -- AUTO_INCREMENT for table `baihatmoi`
 --
 ALTER TABLE `baihatmoi`
-  MODIFY `id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=72;
+  MODIFY `id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=76;
 --
 -- AUTO_INCREMENT for table `casy`
 --
@@ -285,12 +257,12 @@ ALTER TABLE `status`
 -- AUTO_INCREMENT for table `theloai`
 --
 ALTER TABLE `theloai`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
 --
 -- AUTO_INCREMENT for table `user`
 --
 ALTER TABLE `user`
-  MODIFY `id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=34;
+  MODIFY `id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=35;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
